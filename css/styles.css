@@ -131,7 +131,7 @@
     background-color: var(--color-white);
     border: 2px solid var(--color-white);
     border-radius: 999px;
-    padding: 5px;
+    padding: 1px;
     transition: var(--transition);
     cursor: pointer;
     text-decoration: none;
