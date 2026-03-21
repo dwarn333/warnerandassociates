@@ -1,0 +1,243 @@
+/* ============================================================
+   fixed-fee.css — Warner & Associates PLLC
+   MigsFlow Web Design
+   ============================================================ */
+
+/* ============================================================
+   FLAT FEE MENU SECTION
+   ============================================================ */
+
+#flat-fee-menu {
+    padding: var(--section-padding);
+    background-color: var(--color-bg);
+}
+
+.fee-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--color-dark-green);
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+}
+
+/* ============================================================
+   FEE GRID
+   ============================================================ */
+
+.fee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ============================================================
+   FEE CARDS
+   ============================================================ */
+
+.fee-card {
+    border-radius: var(--radius-md);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Dark — card 01 (featured) */
+.fee-card--dark {
+    background-color: var(--color-dark-green);
+}
+
+/* Light — all other cards */
+.fee-card--light {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(4px);
+}
+
+/* Card title */
+.fee-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.4vw, 1.3rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.fee-card--dark .fee-card-title {
+    color: var(--color-white);
+}
+
+.fee-card--light .fee-card-title {
+    color: var(--color-dark-green);
+}
+
+/* Bullet list */
+.fee-card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    margin-bottom: 28px;
+}
+
+.fee-card-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.fee-card-list li img {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.fee-card-list li span {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.fee-card--dark .fee-card-list li span {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.fee-card--light .fee-card-list li span {
+    color: var(--color-body);
+}
+
+/* Card footer — price or TBD + button */
+.fee-card-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.fee-card--light .fee-card-footer {
+    border-top-color: var(--color-border);
+}
+
+.fee-card-footer--tbd {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Price */
+.fee-price {
+    font-family: var(--font-ui);
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: bold;
+    display: block;
+}
+
+.fee-card--dark .fee-price {
+    color: var(--color-white);
+}
+
+.fee-card--light .fee-price {
+    color: var(--color-dark-green);
+}
+
+/* TBD price — smaller, muted */
+.fee-price--tbd {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-body);
+}
+
+.fee-card--dark .fee-price--tbd {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   BUTTON STYLES (scoped to this page)
+   ============================================================ */
+
+.btn-quote {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-dark-green);
+    border-radius: 999px;
+    padding: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-quote-text {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.btn-quote-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    flex-shrink: 0;
+}
+
+.btn-quote-2 {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-dark-green);
+    border: 2px solid var(--color-dark-green);
+    border-radius: 999px;
+    padding: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-quote-text-2 {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .fee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .fee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fee-heading {
+        font-size: 1.4rem;
+    }
+
+    .fee-card {
+        padding: 24px;
+    }
+}
