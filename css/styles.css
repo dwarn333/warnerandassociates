@@ -207,7 +207,6 @@
     display: inline-flex;
     align-items: center;
     background-color: var(--color-dark-green);
-    border: 2px solid var(--color-dark-green);
     border-radius: 999px;
     padding: 5px;
     text-decoration: none;
