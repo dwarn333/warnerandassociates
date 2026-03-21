@@ -464,7 +464,7 @@ p {
 
 .nav-mobile-menu a.active {
     color: var(--color-dark-green);
-    font-weight: 600;
+    font-weight: bold;
 }
 
 /* Nav CTA button */
