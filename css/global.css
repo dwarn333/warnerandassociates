@@ -898,7 +898,7 @@ p {
 
 .footer-contact-item a,
 .footer-contact-item span {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, .9);
     font-family: var(--font-ui);
     font-size: 0.85rem;
     line-height: 1.5;
@@ -1046,6 +1046,7 @@ p {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 28px;
+        margin: 0.75rem;
     }
 
     .footer-brand p {
