@@ -955,7 +955,7 @@ p {
     background-image: url('../images/main-bg.svg');
     background-repeat: repeat;
     background-size: 900px auto;
-    opacity: 0.6;
+    opacity: 1;
     pointer-events: none;
     z-index: 0;
 }
