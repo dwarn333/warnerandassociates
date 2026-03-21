@@ -178,7 +178,6 @@
    .btn-quote         — light bg sections (white ring, green pill)
    .btn-quote--light  — dark bg sections (white ring, green pill, white arrow)
    ============================================================ */
-
 .btn-quote {
     display: inline-flex;
     align-items: center;
@@ -229,15 +228,18 @@
 }
 
 
-
-
-.btn-quote-arrow {
+.btn-quote-arrow, .btn-quote-arrow-2, .btn-hero-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
+    width: 28px;
     flex-shrink: 0;
 }
+
+.btn-quote-arrow img, .btn-quote-arrow-2 img, .btn-hero-arrow img {
+    height: 15px;
+}
+
 
 /* Hover — flip colors */
 /* .btn-quote:hover {
