@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Warner & Associates PLLC — Business-focused legal counsel serving clients across Texas, primarily in Houston." />
+
+        <!-- ============================================================
+             TITLE — change per page
+             ============================================================ -->
+        <title>Warner & Associates PLLC | Home</title>
+
+        <!-- ============================================================
+             PRELOAD — Critical above-the-fold assets
+             Add/remove based on what each page needs above the fold.
+             Hero BG image and logo are critical on every page.
+             ============================================================ -->
+
+        <!-- Preload hero background image (above the fold — NEVER lazy load) -->
+        <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" media="(max-width: 600px)" />
+        <link rel="preload" as="image" href="/images/hero-bg-desktop.webp" media="(min-width: 601px)" />
+
+        <!-- Preload critical font (only the weight used above the fold) -->
+        <link rel="preload" href="/fonts/playfair-display-v40-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/sail-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+
+        <!-- ============================================================
+             CSS — critical.css loads first (above-fold only)
+             global.css deferred, noscript fallback included
+             ============================================================ -->
+        <link rel="stylesheet" href="/css/critical.css" />
+        <link rel="stylesheet" href="/css/global.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <noscript>
+            <link rel="stylesheet" href="/css/global.css" />
+        </noscript>
+
+        <!-- Page-specific CSS — change per page -->
+        <link rel="stylesheet" href="/css/home.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <noscript>
+            <link rel="stylesheet" href="/css/home.css" />
+        </noscript>
+
+        <!-- Favicon -->
+        <!-- <link rel="icon" href="/favicon.ico" /> -->
+    </head>
+
+    <body>
+
+        <!-- ============================================================
+             TOP BAR
+             ============================================================ -->
+        <div id="top-bar">
+            <div class="container">
+                <div class="top-bar-inner">
+                    <!-- Contact info -->
+                    <div class="top-bar-contact">
+                        <a href="mailto:deon@warnerandassociates.com">
+                            <img src="/icons/nav-email.svg" alt="" aria-hidden="true" width="14" height="14" />
+                            deon@warnerandassociates.com
+                        </a>
+                        <a href="tel:7138071007">
+                            <img src="/icons/nav-phone.svg" alt="" aria-hidden="true" width="14" height="14" />
+                            (713) 807-1007
+                        </a>
+                    </div>
+                    <!-- Social icons -->
+                    <div class="top-bar-socials">
+                        <a href="#" aria-label="Facebook">
+                            <img src="/icons/nav-facebook.svg" alt="Facebook" width="16" height="16" />
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <img src="/icons/insta-white.svg" alt="Instagram" width="16" height="16" />
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <img src="/icons/nav-youtube.svg" alt="YouTube" width="16" height="16" />
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <img src="/icons/nav-linkedin.svg" alt="LinkedIn" width="16" height="16" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             MAIN NAVIGATION
+             ============================================================ -->
+        <header id="main-nav">
+            <div class="container">
+                <nav class="nav-inner" aria-label="Main navigation">
+                    <!-- Logo -->
+                    <a href="/index.html" class="nav-logo" aria-label="Warner & Associates PLLC Home">
+                        <img src="/assets/green-logo.svg" alt="Warner & Associates PLLC" width="120" height="40" />
+                    </a>
+
+                    <!-- Desktop nav links -->
+                    <ul class="nav-links" role="list">
+                        <li><a href="/index.html" class="active">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/fixed-fee.html">Fixed Fee</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <div class="nav-cta">
+                        <a href="/contact.html" class="btn btn-primary">
+                            Get In Touch
+                            <img src="/icons/white-arrow.svg" alt="" aria-hidden="true" class="btn-arrow" width="28" height="28" />
+                        </a>
+                    </div>
+
+                    <!-- Hamburger (mobile) -->
+                    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/fixed-fee.html">Fixed Fee</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/contact.html" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </header>
+
+        <!-- ============================================================
+             MAIN CONTENT — unique to each page goes here
+             ============================================================ -->
+        <main id="main-content">
+
+            <!-- PAGE CONTENT HERE -->
+
+        </main>
+
+        <!-- ============================================================
+             CTA BANNER — reused across most pages
+             ============================================================ -->
+        <section id="cta-banner" aria-label="Contact call to action">
+            <div class="cta-banner-content">
+                <h2>Discuss Your Legal Needs With Confidence</h2>
+                <p>Contact our office to discuss your business objectives and learn how we can support your matter with clear, practical legal guidance.</p>
+                <a href="/contact.html" class="btn btn-outline-white">
+                    Get a Quote
+                    <img src="/icons/white-arrow.svg" alt="" aria-hidden="true" class="btn-arrow" width="28" height="28" />
+                </a>
+            </div>
+            <!-- Background image -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="/images/gavel2-img-mobile.webp" />
+                <source media="(min-width: 601px)" srcset="/images/gavel2-img-desktop.webp" />
+                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/gavel2-img-desktop.jpg" alt="" width="1200" height="480" />
+            </picture>
+        </section>
+
+        <!-- ============================================================
+             FOOTER
+             ============================================================ -->
+        <footer id="footer">
+            <!-- Background image -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="/images/footer-bg-mobile.webp" />
+                <source media="(min-width: 601px)" srcset="/images/footer-bg-desktop.webp" />
+                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/footer-bg-desktop.jpg" alt="" width="1920" height="600" />
+            </picture>
+
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-grid">
+
+                        <!-- Brand col -->
+                        <div class="footer-brand">
+                            <img src="/assets/white-logo.svg" alt="Warner & Associates PLLC" class="footer-logo" width="120" height="40" loading="lazy" decoding="async" />
+                            <p>Business-focused legal counsel serving clients across Texas, primarily in Houston.</p>
+                            <div class="footer-socials">
+                                <a href="#" aria-label="Facebook">
+                                    <img src="/icons/fb-white.svg" alt="Facebook" width="15" height="15" loading="lazy" decoding="async" />
+                                </a>
+                                <a href="#" aria-label="Instagram">
+                                    <img src="/icons/insta-white.svg" alt="Instagram" width="15" height="15" loading="lazy" decoding="async" />
+                                </a>
+                                <a href="#" aria-label="Twitter/X">
+                                    <img src="/icons/twitter-white.svg" alt="Twitter/X" width="15" height="15" loading="lazy" decoding="async" />
+                                </a>
+                                <a href="#" aria-label="LinkedIn">
+                                    <img src="/icons/linkedin-white.svg" alt="LinkedIn" width="15" height="15" loading="lazy" decoding="async" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Pages col -->
+                        <div class="footer-col">
+                            <h4>Pages</h4>
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/services.html">Services</a></li>
+                                <li><a href="/blog.html">Blog</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Legal col -->
+                        <div class="footer-col">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms and Condition</a></li>
+                                <li><a href="#">Customer Care</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact col -->
+                        <div class="footer-col">
+                            <h4>Contact Us</h4>
+                            <div class="footer-contact-item">
+                                <img src="/icons/footer-email.svg" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" />
+                                <a href="mailto:hello@warnerandassociates.com">hello@warnerandassociates.com</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="/icons/footer-phone.svg" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" />
+                                <a href="tel:7138071007">Call Our Office</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="/icons/footer-location.svg" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" />
+                                <span>League City, Texas 77573</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer bottom -->
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Warner Associates PLLC. All rights reserved.</p>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ============================================================
+             SCRIPTS
+             ============================================================ -->
+        <script defer src="/js/nav.js"></script>
+
+    </body>
+</html>

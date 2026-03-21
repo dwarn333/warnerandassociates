@@ -1,0 +1,157 @@
+/* ============================================================
+   about.css — Warner & Associates PLLC
+   MigsFlow Web Design
+   ============================================================ */
+
+/* ============================================================
+   BIO SECTION
+   ============================================================ */
+
+#about-bio {
+    padding: var(--section-padding);
+    background-color: var(--color-bg);
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: start;
+}
+
+/* Left — headshot */
+.bio-image-wrap {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: sticky;
+    top: 100px;
+}
+
+.bio-image-wrap picture {
+    display: block;
+}
+
+.bio-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+}
+
+/* Right — content */
+.bio-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--color-dark-green);
+    margin-bottom: 28px;
+}
+
+.bio-block {
+    margin-bottom: 24px;
+}
+
+.bio-block p {
+    font-size: 0.9rem;
+    color: var(--color-body);
+    line-height: 1.8;
+    margin-bottom: 6px;
+}
+
+.bio-block p strong {
+    color: var(--color-dark-green);
+    font-weight: 600;
+}
+
+
+
+/* ============================================================
+   COMMUNITY INVOLVEMENT
+   ============================================================ */
+
+#community {
+    padding: var(--section-padding);
+    background-color: var(--color-white);
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* Left — image */
+.community-image-wrap {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.community-image-wrap picture {
+    display: block;
+}
+
+.community-image-wrap img {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+}
+
+/* Right — content */
+.community-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--color-dark-green);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+#community .community-content p {
+    font-size: 0.9rem;
+    color: var(--color-body);
+    line-height: 1.85;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .bio-grid,
+    .community-grid {
+        gap: 40px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .bio-grid,
+    .community-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* Un-stick the photo on mobile */
+    .bio-image-wrap {
+        position: relative;
+        top: auto;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .bio-heading {
+        text-align: center;
+    }
+
+    .community-heading {
+        font-size: 1.4rem;
+    }
+}

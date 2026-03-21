@@ -1,0 +1,554 @@
+/* ============================================================
+   home.css — Warner & Associates PLLC
+   MigsFlow Web Design
+   ============================================================ */
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+#hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background image */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Overlay — light left (Deon shows), heavy right (text readable) */
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(31, 61, 40, 0.1)  0%,
+        rgba(31, 61, 40, 0.5)  40%,
+        rgba(31, 61, 40, 0.88) 100%
+    );
+    z-index: 1;
+}
+
+/* Deon photo — height-driven, pinned to left edge, zero gap */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-width: 50%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hero-image picture {
+    display: block;
+    height: 100%;
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top left;
+    display: block;
+}
+
+/* Container — pushes text to the right half */
+#hero .container {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Hero text — right half */
+.hero-content {
+    width: 52%;
+    padding: 60px 0;
+}
+
+.hero-content .section-badge {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--color-white);
+    margin-bottom: 18px;
+}
+
+.hero-content .section-badge img {
+    filter: brightness(0) invert(1);
+}
+
+.hero-content h1 {
+    color: var(--color-white);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+/* "Partner" italic gold accent word */
+.hero-accent {
+    font-family: var(--font-accent);
+    color: var(--color-gold);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.hero-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    max-width: 420px;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+/* Book Consultation button —
+   white outer ring wraps two children:
+   [dark green pill — text] [arrow on white gap] */
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 999px;
+    padding: 5px;
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-hero-text {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.btn-hero-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    flex-shrink: 0;
+}
+
+.btn-hero:hover {
+    background-color: var(--color-dark-green);
+    border-color: var(--color-white);
+}
+
+.btn-hero:hover .btn-hero-text {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+}
+
+.btn-hero:hover .btn-hero-arrow img {
+    filter: brightness(0) invert(1);
+}
+
+/* ============================================================
+   GET A QUOTE BUTTONS
+   Same two-div structure as btn-hero.
+   .btn-quote         — light bg sections (white ring, green pill)
+   .btn-quote--light  — dark bg sections (white ring, green pill, white arrow)
+   ============================================================ */
+
+.btn-quote {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-dark-green);
+    border-radius: 999px;
+    padding: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-quote-text {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+
+.btn-quote-2 {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-dark-green);
+    border: 2px solid var(--color-dark-green);
+    border-radius: 999px;
+    padding: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-quote-text-2 {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+
+
+
+.btn-quote-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    flex-shrink: 0;
+}
+
+/* Hover — flip colors */
+/* .btn-quote:hover {
+    background-color: var(--color-dark-green);
+    border-color: var(--color-dark-green);
+}
+
+.btn-quote:hover .btn-quote-text {
+    background-color: transparent;
+    color: var(--color-white);
+} */
+
+.btn-quote:hover .btn-quote-arrow img {
+    filter: brightness(0) invert(1);
+}
+
+/* Dark background variant (CTA banner) */
+.btn-quote--light {
+    border-color: var(--color-white);
+}
+
+/* .btn-quote--light:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-quote--light:hover .btn-quote-text {
+    background-color: transparent;
+    color: var(--color-dark-green);
+} */
+
+.btn-quote--light:hover .btn-quote-arrow img {
+    filter: none;
+}
+/* Hero image */
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.hero-image picture {
+    display: block;
+    max-width: 460px;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* ============================================================
+   WHO WE ARE
+   ============================================================ */
+
+#who-we-are {
+    padding: 60px 0;
+    background-color: var(--color-bg);
+}
+
+#who-we-are .section-badge {
+    margin-bottom: 20px;
+}
+
+.who-statement {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 600;
+    color: var(--color-dark-green);
+    line-height: 1.35;
+    max-width: 920px;
+}
+
+/* ============================================================
+   WHAT DO WE OFFER
+   ============================================================ */
+
+#what-we-offer {
+    padding: var(--section-padding);
+    margin: 0rem 2rem 0rem 2rem;
+    background-color: var(--color-white);
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Image side */
+.offer-image-wrap {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    min-height: 500px;
+    align-self: stretch;
+}
+
+.offer-image-wrap picture {
+    display: block;
+    height: 100%;
+}
+
+.offer-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius-md);
+    display: block;
+}
+
+/* Stat badge overlaid on image */
+.offer-stat {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+}
+
+.offer-stat strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1;
+}
+
+.offer-stat span {
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Content side */
+.offer-content .section-badge {
+    margin-bottom: 12px;
+}
+
+.offer-content h2 {
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+}
+
+.offer-content > p {
+    font-size: 0.9rem;
+    color: var(--color-body);
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+/* Services list */
+.offer-list {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.offer-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.offer-list li:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+.offer-list li img {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.offer-list li span {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--color-body);
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   TEXAS BAR FOUNDATION
+   ============================================================ */
+
+#texas-bar {
+    padding: var(--section-padding);
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+#texas-bar h2 {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 36px;
+}
+
+.texas-bar-logo-wrap {
+    display: inline-flex;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    padding: 8px;
+}
+
+.texas-bar-logo-wrap picture {
+    display: block;
+}
+
+.texas-bar-logo-wrap img {
+    width: 260px;
+    height: auto;
+    display: block;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .hero-content {
+        width: 58%;
+    }
+
+    .offer-grid {
+        gap: 36px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* Hero */
+    #hero {
+        min-height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #hero::before {
+        background: rgba(31, 61, 40, 0.82);
+    }
+
+    /* Reset absolute — stack image above text */
+    .hero-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 48px;
+    }
+
+    .hero-image picture {
+        height: auto;
+        width: 240px;
+    }
+
+    .hero-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Container — center text on mobile */
+    #hero .container {
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+        padding: 24px 0 48px;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+    }
+
+    /* Who we are */
+    #who-we-are {
+        padding: 48px 0;
+    }
+
+    /* Offer grid */
+    .offer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .offer-image-wrap {
+        max-height: 360px;
+        overflow: hidden;
+    }
+
+    /* Texas bar */
+    .texas-bar-logo-wrap img {
+        width: 200px;
+    }
+}
