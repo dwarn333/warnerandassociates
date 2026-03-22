@@ -199,3 +199,30 @@
         max-height: 260px;
     }
 }
+
+
+/* Back to Blog Button */
+.article-back {
+    margin-bottom: 28px;
+}
+
+.article-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-dark-green);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.article-back-link img {
+    transform: rotate(180deg); /* flips the arrow to point left */
+    transition: var(--transition);
+}
+
+.article-back-link:hover {
+    gap: 12px;
+}
