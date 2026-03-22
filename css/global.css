@@ -121,7 +121,7 @@
     --radius-lg: 20px;
 
     /* Transitions */
-    --transition: all 0.3s ease;
+    --transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
 /* ============================================================
@@ -146,6 +146,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
 }
 
 img {
@@ -788,7 +789,7 @@ p {
     gap: 16px;
     margin-bottom: 20px;
 }
-/* 
+
 .footer-logo-circle {
     width: 64px;
     height: 64px;
@@ -797,12 +798,14 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--color-dark-green);
     flex-shrink: 0;
-} */
+    overflow: hidden;
+}
+
+.footer-logo-circle img {
+    width: 40px;
+    height: 40px;
+}
 
 .footer-brand-name {
     display: flex;
@@ -1148,4 +1151,3 @@ p {
 .btn-quote-arrow img, .btn-quote-arrow-2 img, .btn-hero-arrow img {
     height: 15px;
 }
-
