@@ -96,11 +96,13 @@
     --color-body: #4A4C56;
     --color-bg: #F5F4F1;
     --color-form-bg: #0D1A12;
+    --color-form-bg-light: #F8FAFB;
     --color-form-card: #25312A;
     --color-placeholder: #777980;
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-border: #E0DFDB;
+
 
     /* Fonts */
     --font-heading: 'Playfair Display', Georgia, serif;
@@ -545,6 +547,8 @@ p {
     margin-top: 12px;
     justify-content: center;
 }
+
+
 
 
 
