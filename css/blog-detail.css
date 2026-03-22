@@ -1,0 +1,201 @@
+/* ============================================================
+   blog-detail.css — Warner & Associates PLLC
+   MigsFlow Web Design
+   ============================================================ */
+
+/* ============================================================
+   ARTICLE SECTION
+   ============================================================ */
+
+#article {
+    padding: var(--section-padding);
+    background-color: var(--color-bg);
+}
+
+/* White card wrapping all article content */
+.article-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    padding: 40px;
+}
+
+/* ============================================================
+   FEATURED IMAGE
+   ============================================================ */
+
+.article-featured-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 36px;
+}
+
+.article-featured-image picture {
+    display: block;
+}
+
+.article-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+/* ============================================================
+   ARTICLE SUBHEADING
+   ============================================================ */
+
+.article-subheading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: var(--color-dark-green);
+    line-height: 1.35;
+    margin-bottom: 28px;
+}
+
+/* ============================================================
+   CONTENT ROWS
+   ============================================================ */
+
+.article-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+    margin-bottom: 36px;
+}
+
+/* Reverse row — image left, text right */
+.article-row--reverse {
+    direction: rtl;
+}
+
+.article-row--reverse > * {
+    direction: ltr;
+}
+
+/* Text column */
+.article-text p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-body);
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+.article-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bullet list */
+.article-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 14px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article-list li {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-body);
+    line-height: 1.7;
+    padding-left: 4px;
+}
+
+/* Image column */
+.article-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.article-image picture {
+    display: block;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+}
+
+/* ============================================================
+   BUTTON STYLES
+   ============================================================ */
+
+.btn-quote-2 {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-dark-green);
+    border: 2px solid var(--color-dark-green);
+    border-radius: 999px;
+    padding: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-quote-text-2 {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.btn-quote-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .article-card {
+        padding: 32px;
+    }
+
+    .article-row {
+        gap: 28px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .article-card {
+        padding: 20px;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* Reset direction trick on mobile */
+    .article-row--reverse {
+        direction: ltr;
+    }
+
+    .article-featured-image img {
+        max-height: 260px;
+    }
+}
