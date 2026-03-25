@@ -777,7 +777,7 @@ p {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 48px;
     margin-bottom: 48px;
 }
@@ -1051,8 +1051,7 @@ p {
 
     /* Footer */
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 28px;
+        grid-template-columns: repeat(1.8, 1fr);
         margin: 0.75rem;
     }
 
